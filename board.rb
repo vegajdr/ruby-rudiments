@@ -10,7 +10,7 @@ class Board
                 @board[i][j] = 'X'
                 @turn = 'O'
             else
-                puts "Please choose different location"
+                puts "Please choose a different location"
             end
         else
             puts "It's not your turn, fool!"
