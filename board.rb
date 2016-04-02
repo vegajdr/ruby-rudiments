@@ -30,8 +30,16 @@ class Board
         end
     end
     
-    def check_horizontal(i)
-        @board[i][0] != ' ' && @board[i][1] != ' ' && @board[i][2] != ' '
+    def check_horizontal
+        i = 0
+        check = false
+        while i < @board.length
+            @board[i][0] == 'X' && @board[i][1] == 'X' && @board[i][2] == 'X' or
+            @board[i][0] == 'O' && @board[i][1] == 'O' && @board[i][2] == 'O'
+            check = true
+            i += 1
+        end
+        return check
     end
     
     def check_vertical(j)
